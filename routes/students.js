@@ -1,5 +1,12 @@
 const router = require("express").Router();
 let Student = require("../models/Student");
+const schedule = require('node-schedule');
+
+const someDate = new Date('')
+
+schedule.scheduleJob('* * * * *', ()=>{
+    console.log('I ran .......')
+})
 
 router.route("/add").post((req,res)=>{
     const name = req.body.name;
