@@ -31,7 +31,13 @@ connection.once("open", () => {
 const studentRouter = require("./routes/students.js");
 app.use("/student",studentRouter);
 
+const getdatatodbRouter = require("./routes/getdatatodb/timelydatacalls.js");
+app.use("/getdata",getdatatodbRouter);
 
+
+
+
+//  App Port declaration
 app.listen(PORT, ()=> {
     console.log(`Server is Up and Running on Port : ${PORT}`);
 })

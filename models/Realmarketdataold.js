@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const realforexdataSchema = new Schema({
+const realmarketdataSchema = new Schema({
     rfdata_insid :{
         type : String,
         required : true
@@ -48,7 +48,7 @@ const realforexdataSchema = new Schema({
 
 })
 
-const RealforexData = mongoose.model("RealForexData",realforexdataSchema);
+const Realmarketdata = mongoose.model("Realmarketdata",realmarketdataSchema);
 
-module.exports = RealforexData;
+module.exports = Realmarketdata;
 

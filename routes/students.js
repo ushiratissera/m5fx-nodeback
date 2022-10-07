@@ -4,9 +4,14 @@ const schedule = require('node-schedule');
 
 const someDate = new Date('')
 
-schedule.scheduleJob('* * * * *', ()=>{
-    console.log('I ran .......')
-})
+// const irann =schedule.scheduleJob(' * * * * *', ()=>{
+//     let abc = 0; 
+    
+//         console.log('I ran '+abc);
+
+    
+    
+// })
 
 router.route("/add").post((req,res)=>{
     const name = req.body.name;
