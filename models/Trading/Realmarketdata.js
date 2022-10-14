@@ -19,7 +19,7 @@ const realmarketdataSchema = new Schema({
         type : String,
         required : true
     },
-    tfdframe : {
+    reqtime : {
         type : String,
         required : true
     },
@@ -28,13 +28,13 @@ const realmarketdataSchema = new Schema({
         required : true
     },
     otherinf : {
-        type : Object,
-        required : true
+        type : Array,
+        required : false
     },
     
 
 })
 
-const Realmarketdata = mongoose.model("Realmarketdata",realmarketdataSchema);
+const Realmarketdata = mongoose.model("realmarketdata",realmarketdataSchema);
 
 module.exports = Realmarketdata;

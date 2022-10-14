@@ -9,6 +9,11 @@ const customerSchema = new Schema({
     },
     cus_email : {
         type : String,
+        unique: true,
+        required : true
+    },
+    cus_password : {
+        type : String,
         required : true
     },
     cus_mobileno :{
@@ -29,6 +34,7 @@ const customerSchema = new Schema({
     },
     cus_profilepic :{
         type : String,
+        default : "0",
         required : false
     },
     cus_joindate : {
@@ -38,22 +44,27 @@ const customerSchema = new Schema({
     },
     cus_packageid :{
         type : String,
+        default : "0",
         required : true
     },
     cus_selectedinsttype : {
         type : String,
+        default : "0",
         required : true
     },
     cus_yearormonth :{
         type : String,
+        default : "0",
         required : true
     },
     cus_lastlogindt : {
         type : String,
+        default : Date.now,
         required : true
     },
     cus_lastloginip :{
         type : String,
+        default : "0",
         required : true
     },
     cus_isactive : {
@@ -63,6 +74,7 @@ const customerSchema = new Schema({
     },
     cus_ispaid :{
         type : Boolean,
+        default : false,
         required : true
     },
     cus_isemailconfirm : {
@@ -70,9 +82,19 @@ const customerSchema = new Schema({
         default : false,
         required : false
     },
-    cus_isemailconfirm : {
-        type : Boolean,
-        default : false,
+    cus_nextpdate : {
+        type : String,
+        default : "0",
+        required : true
+    },
+    cus_other : {
+        type : String,
+        default : "0",
+        required : false
+    },
+    cus_token : {
+        type : String,
+        default : "0",
         required : true
     }
 

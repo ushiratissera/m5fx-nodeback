@@ -34,6 +34,9 @@ app.use("/student",studentRouter);
 const getdatatodbRouter = require("./routes/getdatatodb/timelydatacalls.js");
 app.use("/getdata",getdatatodbRouter);
 
+const customerRouter = require("./routes/customers/customerdetails.js");
+app.use("/customer",customerRouter);
+
 
 
 
