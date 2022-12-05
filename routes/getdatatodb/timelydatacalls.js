@@ -8,6 +8,7 @@ const AsyncFunction = (async function () {}).constructor;
 
 const someDate = new Date('');
 
+
 router.route("/api").get((req,res)=>{
 
   const apikey = '2LlbosGh_bRQN4CuPH8C';
@@ -41,6 +42,7 @@ function sendreqtoapi() {
     console.table(response.data);
     let recvdata = response.data;
     //price data schema
+    
     let tempdata = {"insid":recvdata.currency,"instype":recvdata.currency,"inscode":recvdata.currency, "insclose":recvdata.close, "inshigh":recvdata.high,"inslow":recvdata.low,"insopen":recvdata.open,"insvalue":recvdata.close} ;
 
     pricearr.push(tempdata);
